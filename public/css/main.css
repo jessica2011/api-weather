@@ -10,7 +10,7 @@
   background-color: rgb(226, 169, 169);
 }
 
-td{
+td, tr, th{
   border-color: transparent !important;
 }
 

@@ -34,7 +34,7 @@ const init = function() {
 
     iconWeather.setAttribute('src', `../assets/images/${icon}.png`);
     temperature.innerHTML = `${dataTemperature} °`;
-    summary.innerHTML = `SUMMARY ${dataSummary}`;
+    summary.innerHTML = dataSummary;
     humidity.innerHTML = `${dataHumidity} %`;
     uvIndex.innerHTML = dataUvIndex;
     pressure.innerHTML = `${dataPressure} hPa`;
@@ -42,12 +42,15 @@ const init = function() {
     let contenido = weatherReportDaysOfTheWeek.slice(0, 7);
 
     contenido.forEach((element, i) => {
-      let template = `<div class = "row">
-        <div><img src="../assets/images/${element.icon}.png"></div>
-        <div><p>${days[i]}</p></div>
-        <div><p>${element.temperatureMin}°</p></div>
-        <div><p>${element.temperatureMax}°</p></div>
-        </div>`;
+      let template = `
+          <tr>
+            <th scope="row"><img class="w100" src="../assets/images/${element.icon}.png"></th>
+            <td>${days[i]}</td>
+            <td>${element.temperatureMin}°</td>
+            <td>${element.temperatureMax}°</td>
+          </tr>
+        </tbody>
+      </table>`;
       boxDaysOfTheWeek.innerHTML += template;
     });
   };
@@ -82,7 +85,6 @@ const init = function() {
   };
 
   getLocation();
-
 };
 window.addEventListener('load', init);
 
