@@ -44,10 +44,10 @@ const init = function() {
     contenido.forEach((element, i) => {
       let template = `
           <tr>
-            <th scope="row"><img class="w100" src="../assets/images/${element.icon}.png"></th>
-            <td>${days[i]}</td>
-            <td>${element.temperatureMin}°</td>
-            <td>${element.temperatureMax}°</td>
+            <th scope="row"><img class="w100 align-middle img-2" src="../assets/images/${element.icon}.png"></th>
+            <td class="align-middle">${days[i]}</td>
+            <td class="align-middle">${element.temperatureMin}°</td>
+            <td class="align-middle">${element.temperatureMax}°</td>
           </tr>
         </tbody>
       </table>`;

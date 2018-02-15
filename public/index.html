@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="box1">
-  <div class="container">
-    <img id="icon-weather">
+<div class="box1 flex">
+  <div class="container flex">
+    <img id="icon-weather" class="img-1">
     <h2 id="temperature" class="text-center"></h2>
-    <div class="flex">
+    <div class="flex"> 
       <table class="table">
         <tbody>
           <tr>
@@ -44,13 +44,13 @@
 
 <div id="box2" class="vh-100">
   <div class="container">
-      <table class="table">
-          <thead>
-            <tr class="text-center">
-              <th scope="col"></th>
-              <th scope="col">Día</th>
-              <th scope="col">T° Mínima</th>
-              <th scope="col">T° Máxima</th>
+      <table class="table container-table">
+          <thead >
+            <tr><br>
+              <th scope="col" class="text-center"></th>
+              <th scope="col" class="text-center"></th>
+              <th scope="col" class="text-center">T° Min</th>
+              <th scope="col" class="text-center">T° Max</th>
             </tr>
           </thead>
           <tbody id="box-days-of-the-week" class="text-center">
